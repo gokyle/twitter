@@ -103,3 +103,7 @@ type DirectMessage struct {
 	Recipient           User
 	RecipientId         int64 `json:"recipient_id"`
 }
+
+type TwitterJsonError struct {
+        err []map[string]string
+}

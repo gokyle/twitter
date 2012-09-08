@@ -10,6 +10,7 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
+        "log"
 	"net/http"
 	"net/url"
 	"regexp"
@@ -231,7 +232,7 @@ func (t *Twitter) requestToken() (err error) {
 		Method: "POST",
 		Params: params,
 	}
-
+        log.Println("[-] params: ", params)
 	body, err := t.sendRestRequest(method)
 	if err != nil {
 		return

@@ -37,6 +37,9 @@ func (t *Twitter) GetPublicTimeline() (tweets []Tweet, err error) {
 		return
 	}
 
+        var jsonError TwitterJsonError
+        err = json.Unmarshal(body, &jsonError)
+        fmt.Println(jsonError)
 	err = json.Unmarshal(body, &tweets)
 	if err != nil {
 		return
