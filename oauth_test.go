@@ -33,7 +33,7 @@ func TestSignature(t *testing.T) {
 	}
 
 	method := &RestMethod{
-		Url:    "https://api.twitter.com/1/statuses/update.json?include_entities=true",
+		Url:    "https://api.twitter.com/1.1/statuses/update.json?include_entities=true",
 		Method: "POST",
 		Params: params,
 		Data:   "status=Hello%20Ladies%20%2B%20Gentlemen%2C%20a%20signed%20OAuth%20request%21",
@@ -67,7 +67,7 @@ func TestOAuthHeader(t *testing.T) {
 	}
 
 	method := &RestMethod{
-		Url:    "https://api.twitter.com/1/statuses/update.json?include_entities=true",
+		Url:    "https://api.twitter.com/1.1/statuses/update.json?include_entities=true",
 		Method: "POST",
 		Params: params,
 		Data:   "status=Hello%20Ladies%20%2B%20Gentlemen%2C%20a%20signed%20OAuth%20request%21",
