@@ -7,6 +7,8 @@ import (
 	"strings"
 )
 
+const API_VERSION="1.1"
+
 const (
 	publicTimelineURL = "http://api.twitter.com/1.1/statuses/public_timeline.json"
 	userStatusURL     = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=%s"
